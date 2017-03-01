@@ -1,0 +1,26 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '6.0'
+
+target 'FFRNTMap' do
+
+  pod 'BaiduMapKit' #百度地图SDK
+  pod 'React', :path => './node_modules/react-native', :subspecs => [
+    'Core',
+    'RCTText',
+    'RCTImage',
+    'RCTNetwork',
+    'RCTWebSocket',
+    
+  ]
+
+
+end
+
+target 'FFRNTMapTests' do
+
+end
+
+target 'FFRNTMapUITests' do
+
+end
+
