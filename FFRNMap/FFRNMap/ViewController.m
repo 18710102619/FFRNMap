@@ -19,13 +19,19 @@
 {
     [super viewDidLoad];
     
+    self.view.backgroundColor=[UIColor yellowColor];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
     NSURL *url = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
     RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:url
                                                         moduleName:@"FFRNMap"
                                                  initialProperties:nil
                                                      launchOptions:nil];
-    self.view = rootView;
-
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view = rootView;
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 @end

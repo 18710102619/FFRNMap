@@ -19,7 +19,7 @@ export default class FFRNMap extends Component {
     pitchEnabled: PropTypes.bool,
   };
   render() {
-    return <MapView style={{width : 200, height: 200}} />;
+    return <MapView style={{width : 300, height: 400}} />;
   }
 }
 

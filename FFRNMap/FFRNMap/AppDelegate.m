@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
 
 @interface AppDelegate ()
 
@@ -16,7 +18,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    BMKMapManager *mapManager = [[BMKMapManager alloc]init];
+    BOOL ret = [mapManager start:@"esArirrsnhhfsKIjCl46GYVbhr9PKkIg"  generalDelegate:nil];
+    if (!ret) {
+        NSLog(@"manager start failed!");
+    }
+    
+    ViewController *root = [[ViewController alloc] init];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:root];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = navi;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

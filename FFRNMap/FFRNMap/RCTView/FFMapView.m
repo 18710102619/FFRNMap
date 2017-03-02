@@ -7,6 +7,7 @@
 //
 
 #import "FFMapView.h"
+#import <BaiduMapAPI_Map/BMKMapView.h>//只引入所需的单个头文件
 
 @implementation FFMapView
 
@@ -37,7 +38,8 @@
 {
     self.backgroundColor = [UIColor orangeColor];
     
-    //写代码
+    BMKMapView* mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 0, 200, 200)];
+    [self addSubview:mapView];
 }
 
 @end

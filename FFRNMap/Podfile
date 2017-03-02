@@ -3,6 +3,7 @@
 
 target 'FFRNMap' do
 
+  pod 'BaiduMapKit' #百度地图SDK
   pod 'React', :path => './node_modules/react-native', :subspecs => [
     'Core',
     'RCTText',
